@@ -1,53 +1,69 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Heart,
+  Users,
   Coffee,
   Moon,
-  Leaf,
+  Sparkles,
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Services = () => {
   const services = [
     {
-      name: "Cuddle ",
-      icon: Heart,
+      name: "Cuddle Companion Rental",
+      icon: Users,
       img: null,
       description:
-        "A gentle experience centered on emotional warmth and presence. Designed for comfort, closeness, and calm, it emphasizes clear boundaries, mutual consent, and a safe, respectful space where emotional connection naturally comes first with trust and care always.",
-      background: "linear-gradient(135deg, #ff6b9d, #c44569, #8b2e59, #1a0510)",
+        "Book a professional companion for emotional comfort and relaxation. Available for hourly or overnight sessions with transparent pricing. All providers are background-verified and trained in professional boundaries. Perfect for stress relief, therapeutic touch, or companionship during difficult times.",
+      background: "linear-gradient(135deg, #3B82F6, #2563EB, #1E40AF, #1E3A8A)",
     },
     {
-      name: "Rent a Date",
+      name: "Date Rental Service",
       icon: Coffee,
       img: null,
       description:
-        "Whether it's coffee, dinner, an event, or a casual outing — enjoy refined social companionship tailored to your mood. Genuine company without pressure or expectations. Share memorable moments with someone who understands the art of conversation and the value of your time.",
-      background: "linear-gradient(135deg, #ff9a56, #ee5a24, #c44569, #2d1520)",
+        "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly and daily rates with instant booking confirmation. Professional, discreet companions who understand social etiquette and the value of genuine conversation. Perfect for corporate events, family gatherings, or when you need a plus-one.",
+      background: "linear-gradient(135deg, #EC4899, #DB2777, #BE185D, #9F1239)",
     },
     {
-      name: "Sleeping Partner",
+      name: "Sleep Partner Rental",
       icon: Moon,
       img: null,
       description:
-        "Designed for comfort and reassurance, emphasizing presence, trust, and relaxation. A discreet and carefully matched connection focused on rest and emotional ease. Sometimes, the greatest comfort comes from simply not being alone during the quiet hours of the night.",
-      background: "linear-gradient(135deg, #a29bfe, #6c5ce7, #5f27cd, #341f97)",
+        "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking required. All providers pass rigorous background checks and safety protocols. Designed for those experiencing loneliness, anxiety, or seeking peaceful rest with a trusted, professional presence.",
+      background: "linear-gradient(135deg, #7C3AED, #6D28D9, #5B21B6, #4C1D95)",
     },
     {
-      name: "Spas & Wellness",
-      icon: Leaf,
+      name: "Wellness & Spa Rentals",
+      icon: Sparkles,
       img: null,
       description:
-        "Explore premium spa and wellness services through Dil Se, bringing curated self-care and rejuvenating experiences within easy reach. Unwind, refresh, and reconnect with yourself through expertly curated treatments designed to restore balance and tranquility to your life.",
-      background: "linear-gradient(135deg, #55efc4, #00b894, #00a885, #006b5a)",
+        "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day. Flexible scheduling with in-home service options available. Experience professional self-care and rejuvenation tailored to your schedule and preferences.",
+      background: "linear-gradient(135deg, #0D9488, #0F766E, #115E59, #134E4A)",
     },
   ];
 
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState("next");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Check on mount
+    checkMobile();
+
+    // Add event listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handlePrev = () => {
     setDirection("prev");
@@ -64,7 +80,7 @@ const Services = () => {
       className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white relative overflow-hidden px-6 md:px-20 py-12 md:py-0"
       style={{
         background: services[index].background,
-        fontFamily: "'Orbitron', sans-serif",
+        fontFamily: "'DM Sans', 'Inter', sans-serif",
       }}
     >
       {/* Visual Section - Icons/Images */}
@@ -88,17 +104,17 @@ const Services = () => {
             zIndex = 3;
           } else if (offset === 1) {
             // Top right background icon - adjusted for mobile
-            x = window.innerWidth < 768 ? 120 : 200;
-            y = window.innerWidth < 768 ? -80 : -120;
-            scale = window.innerWidth < 768 ? 0.5 : 0.7;
+            x = isMobile ? 120 : 200;
+            y = isMobile ? -80 : -120;
+            scale = isMobile ? 0.5 : 0.7;
             opacity = 0.25;
             blur = "blur(4px)";
             zIndex = 1;
           } else if (offset === services.length - 1) {
             // Bottom left background icon - adjusted for mobile
-            x = window.innerWidth < 768 ? -140 : -240;
-            y = window.innerWidth < 768 ? 120 : 180;
-            scale = window.innerWidth < 768 ? 0.45 : 0.65;
+            x = isMobile ? -140 : -240;
+            y = isMobile ? 120 : 180;
+            scale = isMobile ? 0.45 : 0.65;
             opacity = 0.2;
             blur = "blur(5px)";
             zIndex = 0;
@@ -140,11 +156,8 @@ const Services = () => {
                 willChange: "transform, opacity, filter",
               }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-12 md:p-20 border-2 md:border-4 border-white/20">
-                <service.icon
-                  size={window.innerWidth < 768 ? 120 : 180}
-                  strokeWidth={1.5}
-                />
+              <div className="bg-white/10 backdrop-blur-md rounded-full p-12 md:p-20 border-2 md:border-4 border-white/20 shadow-2xl">
+                <service.icon size={isMobile ? 120 : 180} strokeWidth={1.5} />
               </div>
             </div>
           );
@@ -163,16 +176,16 @@ const Services = () => {
             transition={{ duration: 0.6, ease: "easeInOut" }}
           >
             <h1
-              className="text-[32px] md:text-[49px] mb-4 md:mb-5 text-yellow-100 text-center md:text-left"
+              className="text-[32px] md:text-[49px] mb-4 md:mb-5 text-yellow-100 text-center md:text-left font-bold"
               style={{ fontFamily: "'Luckiest Guy', cursive" }}
             >
               {services[index].name}
             </h1>
             <p
-              className="text-[16px] md:text-[22px] text-gray-300 w-full md:w-125 text-center md:text-left"
+              className="text-[16px] md:text-[22px] text-gray-100 w-full md:w-125 text-center md:text-left"
               style={{
                 fontFamily: "'Comic Neue', cursive",
-                lineHeight: window.innerWidth < 768 ? "1.8" : "2.1",
+                lineHeight: isMobile ? "1.8" : "2.1",
               }}
             >
               {services[index].description}
@@ -185,7 +198,7 @@ const Services = () => {
       <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-3 md:gap-4">
         <button
           onClick={handlePrev}
-          className="bg-black/40 hover:bg-yellow-100 hover:text-black text-white p-2.5 md:p-3 rounded-full transition-all duration-300"
+          className="bg-black/40 hover:bg-white/20 hover:text-white text-white p-2.5 md:p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
           aria-label="Previous service"
         >
           <ChevronLeft size={24} className="md:hidden" />
@@ -193,7 +206,7 @@ const Services = () => {
         </button>
         <button
           onClick={handleNext}
-          className="bg-black/40 hover:bg-yellow-100 hover:text-black text-white p-2.5 md:p-3 rounded-full transition-all duration-300"
+          className="bg-black/40 hover:bg-white/20 hover:text-white text-white p-2.5 md:p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
           aria-label="Next service"
         >
           <ChevronRight size={24} className="md:hidden" />

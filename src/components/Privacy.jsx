@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { Shield, Lock, Eye, FileText, Wifi, Scale, Mail } from "lucide-react";
 
@@ -32,7 +31,7 @@ const Privacy = () => {
       ],
       bullets: [
         "Create and manage your account",
-        "Enable matching, chatting, and bookings",
+        "Enable service bookings and provider matching",
         "Process payments and refunds",
         "Improve user experience and platform functionality",
         "Ensure safety, security, and fraud prevention",
@@ -42,12 +41,12 @@ const Privacy = () => {
     },
     {
       icon: Wifi,
-      title: "3. Matching, Chats & Visibility",
+      title: "3. Service Bookings & Provider Matching",
       bullets: [
-        "Profile information is visible only to other users within the Platform.",
-        "Chats are accessible only after mutual interaction or matching.",
-        "Blind Date chats are designed to limit identity exposure until users choose to share information.",
+        "Profile information is visible only to verified providers within the Platform.",
+        "Communications are accessible only after confirmed bookings.",
         "Users control what they share and with whom.",
+        "All interactions are monitored for safety and policy compliance.",
       ],
     },
     {
@@ -56,7 +55,7 @@ const Privacy = () => {
       bullets: [
         "Payment transactions are handled through secure, trusted third-party payment gateways.",
         "Dil Se does not store complete card, bank, or UPI details.",
-        "Transaction data is used only for processing bookings, OTP verification, and refunds.",
+        "Transaction data is used only for processing bookings, verification, and refunds.",
       ],
     },
     {
@@ -104,7 +103,7 @@ const Privacy = () => {
     },
     {
       icon: FileText,
-      title: "9. Children’s Privacy",
+      title: "9. Children's Privacy",
       bullets: [
         "Dil Se is strictly intended for users 18 years and above.",
         "We do not knowingly collect data from minors. Any such account will be terminated immediately upon discovery.",
@@ -114,7 +113,7 @@ const Privacy = () => {
       icon: Wifi,
       title: "10. Third-Party Links",
       bullets: [
-        "The Platform may contain links to third-party services (e.g., payment providers, spa partners).",
+        "The Platform may contain links to third-party services (e.g., payment providers, wellness partners).",
         "Dil Se is not responsible for the privacy practices of these external services.",
       ],
     },
@@ -136,7 +135,7 @@ const Privacy = () => {
   ];
 
   return (
-    <div className="bg-linear-to-b from-white via-orange-50 to-pink-50 py-24 px-6">
+    <div className="bg-linear-to-b from-white via-blue-50 to-cyan-50 py-24 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -145,7 +144,7 @@ const Privacy = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <Lock className="text-orange-500 mx-auto mb-6" size={64} />
+          <Lock className="text-blue-600 mx-auto mb-6" size={64} />
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Privacy Policy
           </h1>
@@ -156,9 +155,9 @@ const Privacy = () => {
             At Dil Se, your privacy is a priority. This Privacy Policy explains
             how we collect, use, store, and protect your personal information
             when you access or use the Dil Se mobile application, website, or
-            related services (“Platform”).
+            related services ("Platform").
           </p>
-          <div className="mt-6 bg-orange-100 border-l-4 border-orange-500 p-4 rounded-r-lg">
+          <div className="mt-6 bg-blue-100 border-l-4 border-blue-600 p-4 rounded-r-lg">
             <p className="text-gray-800 font-medium">
               By using Dil Se, you consent to the practices described in this
               Privacy Policy.
@@ -175,11 +174,11 @@ const Privacy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="bg-white rounded-xl shadow-md p-8 border border-orange-100"
+              className="bg-white rounded-xl shadow-md p-8 border border-blue-100"
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="bg-orange-100 p-3 rounded-lg shrink-0">
-                  <section.icon className="text-orange-500" size={28} />
+                <div className="bg-blue-100 p-3 rounded-lg shrink-0">
+                  <section.icon className="text-blue-600" size={28} />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">
                   {section.title}
@@ -200,7 +199,7 @@ const Privacy = () => {
                 <ul className="space-y-2 ml-16">
                   {section.bullets.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-orange-500 mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <p className="text-gray-700">{item}</p>
                     </li>
                   ))}
@@ -215,7 +214,7 @@ const Privacy = () => {
                   <ul className="space-y-2">
                     {section.subBullets?.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-orange-500 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">•</span>
                         <p className="text-gray-700">{item}</p>
                       </li>
                     ))}
@@ -224,9 +223,11 @@ const Privacy = () => {
               )}
 
               {section.note && (
-                <p className="text-gray-800 font-semibold mt-4 ml-16 bg-orange-50 p-3 rounded-lg">
-                  {section.note}
-                </p>
+                <div className="mt-5 ml-16 bg-linear-to-r from-blue-50 to-cyan-50 p-4 rounded-xl border-l-4 border-blue-600">
+                  <p className="text-gray-800 font-semibold text-sm">
+                    <span className="text-blue-600">Note:</span> {section.note}
+                  </p>
+                </div>
               )}
             </motion.div>
           ))}
@@ -238,7 +239,7 @@ const Privacy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12 bg-linear-to-br from-orange-100 to-pink-100 rounded-xl p-8 text-center border border-orange-200"
+          className="mt-12 bg-linear-to-br from-blue-100 to-cyan-100 rounded-xl p-8 text-center border border-blue-200"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             13. Contact Us
@@ -250,8 +251,8 @@ const Privacy = () => {
             Privacy Team – Dil Se
           </p>
           <div className="flex items-center justify-center gap-2 mt-2">
-            <Mail className="text-orange-500" size={20} />
-            <p className="text-orange-500 font-medium">privacy@dilse.app</p>
+            <Mail className="text-blue-600" size={20} />
+            <p className="text-blue-600 font-medium">privacy@dilse.app</p>
           </div>
         </motion.div>
 
@@ -261,18 +262,18 @@ const Privacy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-8 text-center bg-white rounded-xl p-8 shadow-lg border-2 border-orange-200"
+          className="mt-8 text-center bg-white rounded-xl p-8 shadow-lg border-2 border-blue-200"
         >
-          <Shield className="text-orange-500 mx-auto mb-4" size={48} />
+          <Shield className="text-blue-600 mx-auto mb-4" size={48} />
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
             Our Commitment
           </h3>
           <p className="text-lg text-gray-700">
-            At Dil Se, privacy is not just a policy — it’s a promise.
+            At Dil Se, privacy is not just a policy — it's a promise.
           </p>
-          <p className="text-xl font-bold text-orange-500 mt-2">
+          <p className="text-xl font-bold text-blue-600 mt-2">
             Your trust matters, and every connection begins Dil Se, from the
-            heart. ❤️
+            heart. 💙
           </p>
         </motion.div>
       </div>

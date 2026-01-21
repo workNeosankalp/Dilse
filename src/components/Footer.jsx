@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Heart } from "lucide-react";
+import { Users } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-b from-orange-50 to-orange-100 border-t border-orange-200">
+    <footer className="bg-white border-t border-blue-200">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* App Download Section */}
         <div className="text-center mb-8">
@@ -46,10 +46,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-orange-300">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-blue-300">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-2 text-gray-700">
-            <Heart className="text-orange-500" size={20} />
+            <Users className="text-blue-600" size={20} />
             <span className="font-semibold">Dil se</span>
             <span className="text-sm">© 2026 All rights reserved</span>
           </div>
@@ -58,13 +58,13 @@ const Footer = () => {
           <div className="flex items-center gap-6 text-sm text-gray-700">
             <Link
               to="/terms"
-              className="hover:text-orange-500 transition-colors"
+              className="hover:text-blue-600 transition-colors"
             >
               Terms & Conditions
             </Link>
             <Link
               to="/privacy"
-              className="hover:text-orange-500 transition-colors"
+              className="hover:text-blue-600 transition-colors"
             >
               Privacy Policy
             </Link>

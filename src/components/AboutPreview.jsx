@@ -1,32 +1,31 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { Heart, Sparkles, Shield, ArrowRight } from "lucide-react";
+import { ArrowRight, Clock, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AboutPreview = () => {
   const features = [
     {
-      icon: Heart,
-      title: "Genuine Connections",
+      icon: <Clock className="w-8 h-8" />,
+      title: "Flexible Booking",
       description:
-        "Build meaningful relationships based on trust, respect, and mutual understanding.",
+        "Rent companions by the hour or day. Instant confirmation with transparent pricing and no hidden fees.",
     },
     {
-      icon: Sparkles,
-      title: "Curated Experiences",
+      icon: <Users className="w-8 h-8" />,
+      title: "Professional Providers",
       description:
-        "Premium companionship services designed for comfort, elegance, and discretion.",
+        "All companions are background-verified, trained professionals committed to quality service.",
     },
     {
-      icon: Shield,
-      title: "Safe & Verified",
+      icon: <Shield className="w-8 h-8" />,
+      title: "Safe & Secure",
       description:
-        "Every profile is verified. Your privacy and security are our top priorities.",
+        "Every provider is verified. Your privacy, security, and comfort are our top priorities.",
     },
   ];
 
   return (
-    <section className="py-20 px-6 bg-linear-to-b from-white via-orange-50 to-pink-50">
+    <section className="py-20 px-6 bg-linear-to-b from-white via-blue-50 to-cyan-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -38,14 +37,14 @@ const AboutPreview = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-pink-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
               Dil Se
             </span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            An exclusive companionship and dating platform crafted for those who
-            value connection, comfort, and discretion. Every interaction is
-            built on trust, consent, and mutual understanding.
+            A professional companion rental platform offering verified providers
+            for social events, wellness experiences, and companionship services.
+            Book by the hour or day with secure payments and guaranteed quality.
           </p>
         </motion.div>
 
@@ -58,19 +57,17 @@ const AboutPreview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 hover:border-orange-300"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300"
             >
-              <div className="bg-linear-to-br from-orange-500 to-pink-500   w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-               
-                <feature.icon
-                  className="text-white"
-                  size={32}
-                  strokeWidth={2}
-                />
+              {/* Icon and Title on Same Line */}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-linear-to-br from-blue-500 to-cyan-500 text-white w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {feature.title}
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
               <p className="text-gray-700 leading-relaxed">
                 {feature.description}
               </p>
@@ -88,7 +85,7 @@ const AboutPreview = () => {
         >
           <Link
             to="/about"
-            className="inline-flex items-center gap-3 bg-linear-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group"
+            className="inline-flex items-center gap-3 bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl group"
           >
             Learn More About Us
             <ArrowRight

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
   Shield,
@@ -24,8 +23,8 @@ const Terms = () => {
       icon: FileText,
       title: "2. Nature of the Platform",
       content: [
-        "Dil Se is a digital matchmaking and companionship platform that facilitates connections between users for social and companionship-based experiences.",
-        "Dil Se does not guarantee any match, outcome, or experience.",
+        "Dil Se is a professional companion rental platform that facilitates bookings between users and verified service providers for companionship experiences.",
+        "Dil Se does not guarantee any specific outcome or experience quality.",
         "All interactions are strictly mutual, consensual, and user-driven.",
         "Dil Se does not supervise or control in-person meetings.",
       ],
@@ -35,7 +34,7 @@ const Terms = () => {
       title: "3. User Responsibilities",
       intro: "By using Dil Se, you agree to:",
       content: [
-        "Treat all users with respect and dignity",
+        "Treat all users and providers with respect and dignity",
         "Maintain clear communication and consent at all times",
         "Use the Platform only for lawful and permitted purposes",
         "Not engage in harassment, abuse, coercion, fraud, or misrepresentation",
@@ -51,7 +50,7 @@ const Terms = () => {
           subtitle: "4.1 Payment Authorization",
           points: [
             "At the time of booking a service, the applicable amount will be debited from your account.",
-            "The amount will be securely held by Dil Se and will not be credited to the other user immediately.",
+            "The amount will be securely held by Dil Se and will not be credited to the provider immediately.",
           ],
         },
         {
@@ -120,7 +119,7 @@ const Terms = () => {
       icon: AlertCircle,
       title: "9. Limitation of Liability",
       content: [
-        "Dil Se is not responsible for the conduct, actions, or outcomes of user interactions.",
+        "Dil Se is not responsible for the conduct, actions, or outcomes of user-provider interactions.",
         "Any meetings or experiences occur at the users' own discretion and risk.",
         "Dil Se shall not be liable for emotional distress, personal injury, financial loss, or disputes arising from user interactions.",
       ],
@@ -152,7 +151,7 @@ const Terms = () => {
   ];
 
   return (
-    <div className="bg-linear-to-b from-white via-orange-50 to-pink-50 py-24 px-6">
+    <div className="bg-linear-to-b from-white via-blue-50 to-cyan-50 py-24 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -161,7 +160,7 @@ const Terms = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <Scale className="text-orange-500 mx-auto mb-6" size={64} />
+          <Scale className="text-blue-600 mx-auto mb-6" size={64} />
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Terms & Conditions
           </h1>
@@ -174,7 +173,7 @@ const Terms = () => {
             with and be bound by the following Terms & Conditions ("Terms").
             Please read them carefully before using the Platform.
           </p>
-          <div className="mt-6 bg-orange-100 border-l-4 border-orange-500 p-4 rounded-r-lg">
+          <div className="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
             <p className="text-gray-800 font-medium">
               ⚠️ If you do not agree with these Terms, you must discontinue use
               of Dil Se immediately.
@@ -191,11 +190,11 @@ const Terms = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="bg-white rounded-xl shadow-md p-8 border border-orange-100"
+              className="bg-white rounded-xl shadow-md p-8 border border-blue-100"
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="bg-orange-100 p-3 rounded-lg shrink-0">
-                  <section.icon className="text-orange-500" size={28} />
+                <div className="bg-blue-100 p-3 rounded-lg shrink-0">
+                  <section.icon className="text-blue-600" size={28} />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">
                   {section.title}
@@ -213,7 +212,7 @@ const Terms = () => {
                   {section.content.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle
-                        className="text-orange-500 shrink-0 mt-1"
+                        className="text-blue-600 shrink-0 mt-1"
                         size={18}
                       />
                       <p className="text-gray-700">{item}</p>
@@ -225,14 +224,14 @@ const Terms = () => {
               {section.subsections && (
                 <div className="ml-16 space-y-4">
                   {section.subsections.map((sub, i) => (
-                    <div key={i} className="bg-orange-50 p-4 rounded-lg">
+                    <div key={i} className="bg-blue-50 p-4 rounded-lg">
                       <h3 className="font-bold text-gray-900 mb-2">
                         {sub.subtitle}
                       </h3>
                       <ul className="space-y-2">
                         {sub.points.map((point, j) => (
                           <li key={j} className="flex items-start gap-2">
-                            <span className="text-orange-500 font-bold">•</span>
+                            <span className="text-blue-600 font-bold">•</span>
                             <p className="text-gray-700">{point}</p>
                           </li>
                         ))}
@@ -243,7 +242,7 @@ const Terms = () => {
               )}
 
               {section.footer && (
-                <p className="text-gray-800 font-semibold mt-4 ml-16 bg-orange-50 p-3 rounded-lg">
+                <p className="text-gray-800 font-semibold mt-4 ml-16 bg-blue-50 p-3 rounded-lg">
                   {section.footer}
                 </p>
               )}
@@ -257,7 +256,7 @@ const Terms = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12 bg-linear-to-br from-orange-100 to-pink-100 rounded-xl p-8 text-center border border-orange-200"
+          className="mt-12 bg-linear-to-br from-blue-100 to-cyan-100 rounded-xl p-8 text-center border border-blue-200"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             13. Contact Information
@@ -269,7 +268,7 @@ const Terms = () => {
           <p className="text-lg font-semibold text-gray-900">
             Support Team – Dil Se
           </p>
-          <p className="text-orange-500 font-medium">📧 support@dilse.app</p>
+          <p className="text-blue-600 font-medium">📧 support@dilse.app</p>
         </motion.div>
 
         {/* Final Note */}
@@ -278,16 +277,16 @@ const Terms = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-8 text-center bg-white rounded-xl p-8 shadow-lg border-2 border-orange-200"
+          className="mt-8 text-center bg-white rounded-xl p-8 shadow-lg border-2 border-blue-200"
         >
-          <Shield className="text-orange-500 mx-auto mb-4" size={48} />
+          <Shield className="text-blue-600 mx-auto mb-4" size={48} />
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Final Note</h3>
           <p className="text-lg text-gray-700 italic">
             By using Dil Se, you acknowledge that you have read, understood, and
             agreed to these Terms & Conditions —
           </p>
-          <p className="text-xl font-bold text-orange-500 mt-2">
-            Dil Se, from the heart, with responsibility. ❤️
+          <p className="text-xl font-bold text-blue-600 mt-2">
+            Dil Se, from the heart, with responsibility. 💙
           </p>
         </motion.div>
       </div>

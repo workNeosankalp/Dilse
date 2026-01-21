@@ -1,63 +1,62 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
-  Heart,
+  Users,
   Sparkles,
   Moon,
   Coffee,
-  Leaf,
   Shield,
   CheckCircle,
-  Users,
+  Clock,
   Lock,
 } from "lucide-react";
 
 const About = () => {
   const services = [
     {
-      icon: Heart,
-      title: "Cuddle Companionship",
+      icon: Users,
+      title: "Cuddle Companion Rental",
       description:
-        "A gentle experience focused on emotional warmth and presence. Perfect for those seeking comfort, closeness, and a sense of calm — delivered with clarity, boundaries, and mutual agreement.",
+        "Book professional companions for emotional comfort and relaxation. Available for hourly or overnight sessions with verified providers trained in professional boundaries and therapeutic presence.",
     },
     {
       icon: Coffee,
-      title: "Rent a Date",
+      title: "Date Rental Service",
       description:
-        "Whether it's coffee, dinner, an event, or a casual outing — enjoy refined social companionship tailored to your mood. Genuine company without pressure or expectations.",
+        "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly rates with professional, discreet companions who understand social etiquette and genuine conversation.",
     },
     {
       icon: Moon,
-      title: "Bed Share / Sleeping Partner",
+      title: "Sleep Partner Rental",
       description:
-        "Designed for comfort and reassurance, emphasizing presence, trust, and relaxation. A discreet and carefully matched connection focused on rest and emotional ease.",
+        "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking. All providers pass rigorous background checks and safety protocols.",
     },
     {
-      icon: Leaf,
-      title: "Spas & Wellness",
+      icon: Sparkles,
+      title: "Wellness & Spa Rentals",
       description:
-        "Explore premium spa and wellness services through Dil Se, bringing curated self-care and rejuvenating experiences within easy reach.",
+        "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day.",
     },
   ];
 
   const features = [
     {
-      icon: Users,
-      title: "Intelligent Matching",
+      icon: Clock,
+      title: "Flexible Booking",
       description:
-        "Sleek swipe-based system aligned with your preferences — simple, intuitive, and intentional.",
+        "Rent companions by the hour or day. Instant confirmation with transparent pricing and no hidden fees.",
     },
     {
       icon: Lock,
-      title: "Secure Chat",
+      title: "Secure Payments",
       description:
-        "Connect and chat securely after matching, with full privacy protection.",
+        "Process bookings securely with encrypted payment gateways and full transaction protection.",
     },
     {
-      icon: Sparkles,
-      title: "Blind Date Mode",
+      icon: Shield,
+      title: "Verified Providers",
       description:
-        "Begin conversations anonymously and let chemistry take the lead before revealing identities.",
+        "Every provider is background-verified and trained to deliver quality service with professionalism.",
     },
   ];
 
@@ -69,7 +68,7 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-linear-to-b from-white via-orange-50 to-pink-50">
+    <div className="bg-linear-to-b from-white via-blue-50 to-cyan-50">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -78,24 +77,19 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Heart
-              className="text-orange-500 mx-auto mb-6"
+            <Users
+              className="text-blue-600 mx-auto mb-6 md:mt-8"
               size={60}
-              fill="currentColor"
+              strokeWidth={1.5}
             />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-orange-500">Dil Se</span>
+              About <span className="text-blue-600">Dil Se</span>
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed mb-4">
-              An exclusive companionship and dating platform crafted for those
-              who value connection, comfort, and discretion.
+              A professional companion rental platform offering verified providers for social events, wellness experiences, and companionship services.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Designed with elegance at its core, Dil Se redefines modern dating
-              by offering curated experiences that go beyond traditional
-              matchmaking. Every interaction is built on trust, consent, and
-              mutual understanding — allowing meaningful connections to unfold
-              naturally, from the heart.
+              Designed with professionalism at its core, Dil Se offers a curated marketplace for booking quality companionship experiences. Every interaction is built on trust, consent, and mutual understanding — ensuring safe, reliable service delivery from verified providers.
             </p>
           </motion.div>
         </div>
@@ -115,8 +109,7 @@ const About = () => {
               Curated Experiences
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Thoughtfully designed services that match different companionship
-              needs while maintaining a refined and respectful environment.
+              Thoughtfully designed services that match different companionship needs while maintaining a refined and respectful environment.
             </p>
           </motion.div>
 
@@ -128,10 +121,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-linear-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
+                className="bg-linear-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100"
               >
                 <service.icon
-                  className="text-orange-500 mb-4"
+                  className="text-blue-600 mb-4"
                   size={40}
                   strokeWidth={1.5}
                 />
@@ -147,8 +140,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Intelligent Matching */}
-      <section className="py-16 px-6 bg-linear-to-b from-orange-50 to-white">
+      {/* Platform Features */}
+      <section className="py-16 px-6 bg-linear-to-b from-blue-50 to-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,11 +151,10 @@ const About = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Intelligent Matching, Elevated Connections
+              Professional Service Rental Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A sleek swipe-based system to discover profiles aligned with your
-              preferences — simple, intuitive, and intentional.
+              A streamlined booking system to discover verified providers aligned with your needs — simple, secure, and professional.
             </p>
           </motion.div>
 
@@ -176,8 +168,8 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="text-orange-500" size={32} />
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="text-blue-600" size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {feature.title}
@@ -189,7 +181,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Accessible Luxury */}
+      {/* Accessible Quality */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -198,21 +190,19 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Sparkles className="text-orange-500 mx-auto mb-6" size={48} />
+            <Sparkles className="text-blue-600 mx-auto mb-6" size={48} />
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Accessible Luxury
+              Accessible Quality Service
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Dil Se is built on the idea that premium experiences should remain
-              accessible. Our transparent and minimal pricing ensures
-              exclusivity without excess.
+              Dil Se is built on the idea that premium companionship experiences should remain accessible. Our transparent pricing and verified providers ensure quality service without compromising safety or professionalism.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Philosophy */}
-      <section className="py-16 px-6 bg-linear-to-b from-orange-50 to-pink-100">
+      <section className="py-16 px-6 bg-linear-to-b from-blue-50 to-cyan-100">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +211,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <Shield className="text-orange-500 mx-auto mb-6" size={56} />
+            <Shield className="text-blue-600 mx-auto mb-6" size={56} />
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               The Dil Se Philosophy
             </h2>
@@ -238,7 +228,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-center gap-4 bg-white p-6 rounded-xl shadow-md"
               >
-                <CheckCircle className="text-orange-500 shrink-0" size={28} />
+                <CheckCircle className="text-blue-600 shrink-0" size={28} />
                 <p className="text-lg text-gray-800 font-medium">{value}</p>
               </motion.div>
             ))}
@@ -252,10 +242,10 @@ const About = () => {
             className="text-center mt-12"
           >
             <p className="text-2xl font-bold text-gray-900">
-              Dil Se is where modern companionship meets elegance —
+              Dil Se is where professional companionship meets quality service —
             </p>
-            <p className="text-xl text-orange-500 font-semibold mt-2">
-              and every connection begins Dil Se. ❤️
+            <p className="text-xl text-blue-600 font-semibold mt-2">
+              and every connection begins Dil Se. 💙
             </p>
           </motion.div>
         </div>

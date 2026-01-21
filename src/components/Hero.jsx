@@ -1,59 +1,20 @@
-/* eslint-disable react-hooks/purity */
-/* eslint-disable no-unused-vars */
-import { motion } from "framer-motion";
-import { Heart, Sparkles, Shield } from "lucide-react";
-import { useMemo } from "react";
+import { motion } from 'framer-motion';
+import { Clock, Shield, Users } from 'lucide-react';
 
 const Hero = () => {
-  const floatingHearts = useMemo(
-    () =>
-      [...Array(8)].map(() => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        duration: 3 + Math.random() * 2,
-        delay: Math.random() * 2,
-        size: 40 + Math.random() * 40,
-      })),
-    [],
-  );
-
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-orange-50 via-pink-50 to-orange-100 overflow-hidden px-6 pt-24 pb-16 md:pt-8 md:pb-0"
+    <section 
+      className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-slate-50 to-cyan-50 overflow-hidden px-6 pt-28 pb-16 md:pt-10 md:pb-0"
       style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
     >
-      {/* Floating Hearts Background */}
+      {/* Background Gradient Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {floatingHearts.map((heart, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              left: `${heart.left}%`,
-              top: `${heart.top}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.4, 0.2],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: heart.duration,
-              repeat: Infinity,
-              delay: heart.delay,
-            }}
-          >
-            <Heart
-              className="text-orange-300"
-              size={heart.size}
-              fill="currentColor"
-            />
-          </motion.div>
-        ))}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300 rounded-full blur-3xl opacity-20"></div>
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left: Phone Mockup / Image */}
+        {/* Left: Phone Mockup */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -62,37 +23,25 @@ const Hero = () => {
         >
           <div className="relative">
             {/* Phone Frame */}
-            <div className="w-80 h-150 bg-linear-to-br from-orange-500 to-pink-500 rounded-[3rem] p-3 shadow-2xl">
+            <div className="w-80 h-150 bg-linear-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden flex items-center justify-center">
-                {/* App Preview Content */}
                 <div className="text-center p-8">
-                  <Heart
-                    className="text-orange-500 mx-auto mb-4"
-                    size={80}
-                    fill="currentColor"
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Dil Se
-                  </h3>
-                  <p className="text-gray-600">
-                    Where connections begin from the heart
-                  </p>
-
+                  <div className="bg-linear-to-br from-blue-500 to-cyan-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Users className="text-white" size={40} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Dil Se</h3>
+                  <p className="text-gray-600 mb-1">Professional Companion Rentals</p>
+                  <p className="text-sm text-gray-500">Book by the hour or day</p>
+                  
                   <div className="mt-8 space-y-3">
-                    <div className="bg-orange-100 p-4 rounded-2xl">
-                      <p className="text-sm font-medium text-gray-800">
-                        💬 Smart Matching
-                      </p>
+                    <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
+                      <p className="text-sm font-medium text-gray-800">⏰ Flexible Booking</p>
                     </div>
-                    <div className="bg-pink-100 p-4 rounded-2xl">
-                      <p className="text-sm font-medium text-gray-800">
-                        🔒 Verified Profiles
-                      </p>
+                    <div className="bg-cyan-50 p-4 rounded-2xl border border-cyan-200">
+                      <p className="text-sm font-medium text-gray-800">✓ Verified Providers</p>
                     </div>
-                    <div className="bg-orange-100 p-4 rounded-2xl">
-                      <p className="text-sm font-medium text-gray-800">
-                        ✨ Curated Experiences
-                      </p>
+                    <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
+                      <p className="text-sm font-medium text-gray-800">🛡️ Safe & Secure</p>
                     </div>
                   </div>
                 </div>
@@ -103,9 +52,9 @@ const Hero = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-xl"
+              className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-xl border-2 border-blue-200"
             >
-              <Sparkles className="text-orange-500" size={32} />
+              <Clock className="text-blue-600" size={32} />
             </motion.div>
           </div>
         </motion.div>
@@ -123,9 +72,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Find Your
-              <span className="block text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-pink-500">
-                Perfect Match
+              Rent Premium
+              <span className="block text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
+                Companion Services
               </span>
             </h1>
           </motion.div>
@@ -136,8 +85,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-xl text-gray-700 mb-8 leading-relaxed"
           >
-            Dil Se is where modern companionship meets elegance. Experience
-            curated connections built on trust, respect, and genuine chemistry.
+            Book professional companions for events, outings, wellness experiences, and social gatherings. 
+            Hourly and daily rentals available with verified, background-checked providers.
           </motion.p>
 
           {/* Feature Pills */}
@@ -147,23 +96,17 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-wrap justify-center md:justify-start gap-3 mb-8"
           >
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-              <Shield className="text-orange-500" size={20} />
-              <span className="text-sm font-medium text-gray-800">
-                Verified Profiles
-              </span>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100">
+              <Shield className="text-blue-600" size={20} />
+              <span className="text-sm font-medium text-gray-800">Verified Providers</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-              <Heart className="text-pink-500" size={20} />
-              <span className="text-sm font-medium text-gray-800">
-                Premium Experience
-              </span>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-cyan-100">
+              <Clock className="text-cyan-600" size={20} />
+              <span className="text-sm font-medium text-gray-800">Hourly/Daily Rates</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-              <Sparkles className="text-orange-500" size={20} />
-              <span className="text-sm font-medium text-gray-800">
-                AI Matching
-              </span>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100">
+              <Users className="text-blue-600" size={20} />
+              <span className="text-sm font-medium text-gray-800">500+ Companions</span>
             </div>
           </motion.div>
 
@@ -214,7 +157,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1.2 }}
             className="text-sm text-gray-600 mt-6"
           >
-            🔒 Your privacy is our priority • Trusted by thousands
+            🔒 Secure payments • Background-verified • 24/7 support
           </motion.p>
         </motion.div>
       </div>

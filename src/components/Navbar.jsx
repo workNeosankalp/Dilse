@@ -11,25 +11,28 @@ const Navbar = () => {
         <div className="px-6 md:px-8 py-4 md:py-5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link
-              to="/"
-              onClick={(e) => {
-                if (window.location.pathname === "/") {
-                  e.preventDefault();
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-              className="flex items-center"
-            >
-              <img
-                src="/logo_reckme.png"
-                alt="reckme"
-                className="h-10 md:h-10 w-auto object-contain"
-              />
-            </Link>
+           <Link
+  to="/"
+  onClick={(e) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }}
+  className="flex items-center"
+>
+  <img
+    src="/logo_reckme.png"
+    alt="reckme"
+    className="h-12 md:h-14 w-auto object-contain drop-shadow-lg"
+    style={{ filter: 'drop-shadow(0 2px 4px rgba(37, 99, 235, 0.5))' }}
+  />
+</Link>
+
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-10">

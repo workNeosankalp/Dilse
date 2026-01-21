@@ -21,7 +21,7 @@ const About = () => {
     },
     {
       icon: Coffee,
-      title: "Date Rental Service",
+      title: "Date or Friend Rental",
       description:
         "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly rates with professional, discreet companions who understand social etiquette and genuine conversation.",
     },
@@ -56,7 +56,7 @@ const About = () => {
       icon: Shield,
       title: "Verified Providers",
       description:
-        "Every provider is background-verified and trained to deliver quality service with professionalism.",
+        "Every provider is background-verified and committed to delivering quality service with professionalism.",
     },
   ];
 
@@ -83,13 +83,18 @@ const About = () => {
               strokeWidth={1.5}
             />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">Dil Se</span>
+              About <span className="text-blue-600">reckme</span>
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed mb-4">
-              A professional companion rental platform offering verified providers for social events, wellness experiences, and companionship services.
+              A professional companion rental platform offering verified
+              providers for cuddle sessions, date or friend rentals, overnight
+              sleep, spa & wellness experiences.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Designed with professionalism at its core, Dil Se offers a curated marketplace for booking quality companionship experiences. Every interaction is built on trust, consent, and mutual understanding — ensuring safe, reliable service delivery from verified providers.
+              Designed with professionalism at its core, reckme offers a curated
+              marketplace for booking quality companionship experiences. Every
+              interaction is built on trust, consent, and mutual understanding —
+              ensuring safe, reliable service delivery from verified providers.
             </p>
           </motion.div>
         </div>
@@ -109,7 +114,8 @@ const About = () => {
               Curated Experiences
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Thoughtfully designed services that match different companionship needs while maintaining a refined and respectful environment.
+              Thoughtfully designed services that match different companionship
+              needs while maintaining a refined and respectful environment.
             </p>
           </motion.div>
 
@@ -154,7 +160,8 @@ const About = () => {
               Professional Service Rental Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A streamlined booking system to discover verified providers aligned with your needs — simple, secure, and professional.
+              A streamlined booking system to discover verified providers
+              aligned with your needs — simple, secure, and professional.
             </p>
           </motion.div>
 
@@ -195,7 +202,10 @@ const About = () => {
               Accessible Quality Service
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Dil Se is built on the idea that premium companionship experiences should remain accessible. Our transparent pricing and verified providers ensure quality service without compromising safety or professionalism.
+              reckme is built on the idea that premium companionship experiences
+              should remain accessible. Our transparent pricing and verified
+              providers ensure quality service without compromising safety or
+              professionalism.
             </p>
           </motion.div>
         </div>
@@ -213,7 +223,7 @@ const About = () => {
           >
             <Shield className="text-blue-600 mx-auto mb-6" size={56} />
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              The Dil Se Philosophy
+              The reckme Philosophy
             </h2>
             <p className="text-lg text-gray-600 mb-8">We stand for:</p>
           </motion.div>
@@ -242,10 +252,10 @@ const About = () => {
             className="text-center mt-12"
           >
             <p className="text-2xl font-bold text-gray-900">
-              Dil Se is where professional companionship meets quality service —
+              reckme is where professional companionship meets quality service —
             </p>
             <p className="text-xl text-blue-600 font-semibold mt-2">
-              and every connection begins Dil Se. 💙
+              and every connection begins reckme. 💙
             </p>
           </motion.div>
         </div>

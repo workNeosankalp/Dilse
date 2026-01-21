@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Clock, Shield, Users } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Clock, Shield, Users } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section 
+    <section
       className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-slate-50 to-cyan-50 overflow-hidden px-6 pt-28 pb-16 md:pt-10 md:pb-0"
       style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
     >
@@ -29,19 +29,31 @@ const Hero = () => {
                   <div className="bg-linear-to-br from-blue-500 to-cyan-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Users className="text-white" size={40} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Dil Se</h3>
-                  <p className="text-gray-600 mb-1">Professional Companion Rentals</p>
-                  <p className="text-sm text-gray-500">Book by the hour or day</p>
-                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    reckme
+                  </h3>
+                  <p className="text-gray-600 mb-1">
+                    Professional Companion Rentals
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Book by the hour or day
+                  </p>
+
                   <div className="mt-8 space-y-3">
                     <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
-                      <p className="text-sm font-medium text-gray-800">⏰ Flexible Booking</p>
+                      <p className="text-sm font-medium text-gray-800">
+                        ⏰ Flexible Booking
+                      </p>
                     </div>
                     <div className="bg-cyan-50 p-4 rounded-2xl border border-cyan-200">
-                      <p className="text-sm font-medium text-gray-800">✓ Verified Providers</p>
+                      <p className="text-sm font-medium text-gray-800">
+                        ✓ Verified Providers
+                      </p>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
-                      <p className="text-sm font-medium text-gray-800">🛡️ Safe & Secure</p>
+                      <p className="text-sm font-medium text-gray-800">
+                        🛡️ Safe & Secure
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -74,7 +86,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Rent Premium
               <span className="block text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
-                Companion Services
+                Companionship
               </span>
             </h1>
           </motion.div>
@@ -85,8 +97,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-xl text-gray-700 mb-8 leading-relaxed"
           >
-            Book professional companions for events, outings, wellness experiences, and social gatherings. 
-            Hourly and daily rentals available with verified, background-checked providers.
+            Book professional companions for cuddle sessions, date rentals,
+            overnight sleep, and wellness experiences. Flexible hourly and daily
+            rentals available with verified, background-checked providers.
           </motion.p>
 
           {/* Feature Pills */}
@@ -98,15 +111,21 @@ const Hero = () => {
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100">
               <Shield className="text-blue-600" size={20} />
-              <span className="text-sm font-medium text-gray-800">Verified Providers</span>
+              <span className="text-sm font-medium text-gray-800">
+                Verified Providers
+              </span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-cyan-100">
               <Clock className="text-cyan-600" size={20} />
-              <span className="text-sm font-medium text-gray-800">Hourly/Daily Rates</span>
+              <span className="text-sm font-medium text-gray-800">
+                Hourly/Daily Rates
+              </span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100">
               <Users className="text-blue-600" size={20} />
-              <span className="text-sm font-medium text-gray-800">500+ Companions</span>
+              <span className="text-sm font-medium text-gray-800">
+                500+ Companions
+              </span>
             </div>
           </motion.div>
 

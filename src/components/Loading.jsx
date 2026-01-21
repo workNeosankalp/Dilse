@@ -30,7 +30,7 @@ const Loading = () => {
           transition={{ duration: 0.6 }}
           className="text-5xl font-bold text-blue-600 mb-4"
         >
-          Dil se
+          reckme
         </motion.h1>
 
         {/* Loading Text */}

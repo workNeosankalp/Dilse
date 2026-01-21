@@ -14,13 +14,13 @@ const AboutPreview = () => {
       icon: <Users className="w-8 h-8" />,
       title: "Professional Providers",
       description:
-        "All companions are background-verified, trained professionals committed to quality service.",
+        "All companions are background-verified individuals committed to providing respectful and quality experiences.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Safe & Secure",
       description:
-        "Every provider is verified. Your privacy, security, and comfort are our top priorities.",
+        "Every provider is verified, with your privacy, security, and comfort as our highest priorities.",
     },
   ];
 
@@ -38,13 +38,14 @@ const AboutPreview = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
-              Dil Se
+              reckme
             </span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             A professional companion rental platform offering verified providers
-            for social events, wellness experiences, and companionship services.
-            Book by the hour or day with secure payments and guaranteed quality.
+            for cuddle sessions, date or friend rentals, overnight sleep, spa &
+            wellness experiences. Book by the hour or day with secure payments
+            and guaranteed quality.
           </p>
         </motion.div>
 

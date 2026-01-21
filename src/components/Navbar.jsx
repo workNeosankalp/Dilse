@@ -11,20 +11,55 @@ const Navbar = () => {
         <div className="px-6 md:px-8 py-4 md:py-5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="text-2xl md:text-3xl font-bold text-blue-600">
-              Dil se
+            <Link
+              to="/"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="flex items-center"
+            >
+              <img
+                src="/logo_reckme.png"
+                alt="reckme"
+                className="h-10 md:h-10 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-10">
               <Link
                 to="/"
+                onClick={(e) => {
+                  if (window.location.pathname === "/") {
+                    e.preventDefault();
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
                 className="text-gray-800 hover:text-blue-600 transition-colors font-semibold text-lg"
               >
                 Home
               </Link>
+
               <Link
                 to="/about"
+                onClick={(e) => {
+                  if (window.location.pathname === "/about") {
+                    e.preventDefault();
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
                 className="text-gray-800 hover:text-blue-600 transition-colors font-semibold text-lg"
               >
                 About

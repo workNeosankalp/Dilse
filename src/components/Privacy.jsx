@@ -7,7 +7,7 @@ const Privacy = () => {
       icon: FileText,
       title: "1. Information We Collect",
       paragraphs: [
-        "We collect information to provide a secure, personalized, and seamless experience on Dil Se.",
+        "We collect information to provide a secure, personalized, and seamless experience on reckme.",
       ],
       bullets: [
         "Name, age, gender, and profile details",
@@ -27,7 +27,7 @@ const Privacy = () => {
       icon: Eye,
       title: "2. How We Use Your Information",
       paragraphs: [
-        "Your information is used to operate and improve the Platform, enhance your experience, and keep Dil Se safe.",
+        "Your information is used to operate and improve the Platform, enhance your experience, and keep reckme safe.",
       ],
       bullets: [
         "Create and manage your account",
@@ -37,7 +37,7 @@ const Privacy = () => {
         "Ensure safety, security, and fraud prevention",
         "Communicate important updates, support, and notifications",
       ],
-      note: "Dil Se does not sell your personal data to third parties.",
+      note: "reckme does not sell your personal data to third parties.",
     },
     {
       icon: Wifi,
@@ -54,7 +54,7 @@ const Privacy = () => {
       title: "4. Payments & Financial Data",
       bullets: [
         "Payment transactions are handled through secure, trusted third-party payment gateways.",
-        "Dil Se does not store complete card, bank, or UPI details.",
+        "reckme does not store complete card, bank, or UPI details.",
         "Transaction data is used only for processing bookings, verification, and refunds.",
       ],
     },
@@ -68,7 +68,7 @@ const Privacy = () => {
         "Required to process payments or refunds",
         "Necessary to comply with legal obligations",
         "Required to investigate fraud, abuse, or policy violations",
-        "Needed to protect the rights, safety, or property of Dil Se or its users",
+        "Needed to protect the rights, safety, or property of reckme or its users",
       ],
       note: "All third-party partners are bound by strict confidentiality and data protection standards.",
     },
@@ -105,7 +105,7 @@ const Privacy = () => {
       icon: FileText,
       title: "9. Children's Privacy",
       bullets: [
-        "Dil Se is strictly intended for users 18 years and above.",
+        "reckme is strictly intended for users 18 years and above.",
         "We do not knowingly collect data from minors. Any such account will be terminated immediately upon discovery.",
       ],
     },
@@ -114,7 +114,7 @@ const Privacy = () => {
       title: "10. Third-Party Links",
       bullets: [
         "The Platform may contain links to third-party services (e.g., payment providers, wellness partners).",
-        "Dil Se is not responsible for the privacy practices of these external services.",
+        "reckme is not responsible for the privacy practices of these external services.",
       ],
     },
     {
@@ -152,14 +152,14 @@ const Privacy = () => {
             Effective Date: January 20, 2026
           </p>
           <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            At Dil Se, your privacy is a priority. This Privacy Policy explains
+            At reckme, your privacy is a priority. This Privacy Policy explains
             how we collect, use, store, and protect your personal information
-            when you access or use the Dil Se mobile application, website, or
+            when you access or use the reckme mobile application, website, or
             related services ("Platform").
           </p>
           <div className="mt-6 bg-blue-100 border-l-4 border-blue-600 p-4 rounded-r-lg">
             <p className="text-gray-800 font-medium">
-              By using Dil Se, you consent to the practices described in this
+              By using reckme, you consent to the practices described in this
               Privacy Policy.
             </p>
           </div>
@@ -248,11 +248,11 @@ const Privacy = () => {
             For questions, concerns, or privacy-related requests, contact:
           </p>
           <p className="text-lg font-semibold text-gray-900">
-            Privacy Team – Dil Se
+            Privacy Team – reckme
           </p>
           <div className="flex items-center justify-center gap-2 mt-2">
             <Mail className="text-blue-600" size={20} />
-            <p className="text-blue-600 font-medium">privacy@dilse.app</p>
+            <p className="text-blue-600 font-medium">privacy@reckme.app</p>
           </div>
         </motion.div>
 
@@ -269,10 +269,10 @@ const Privacy = () => {
             Our Commitment
           </h3>
           <p className="text-lg text-gray-700">
-            At Dil Se, privacy is not just a policy — it's a promise.
+            At reckme, privacy is not just a policy — it's a promise.
           </p>
           <p className="text-xl font-bold text-blue-600 mt-2">
-            Your trust matters, and every connection begins Dil Se, from the
+            Your trust matters, and every connection begins reckme, from the
             heart. 💙
           </p>
         </motion.div>

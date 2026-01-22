@@ -22,15 +22,21 @@ const Navbar = () => {
                   });
                 }
               }}
-              className="flex items-center"
+              className="flex items-center gap-3"
             >
-              <div className="bg-linear-to-r from-blue-600 to-cyan-600  rounded-lg">
+              {/* Logo */}
+              <div className="bg-linear-to-r from-blue-600 to-cyan-600 rounded-lg">
                 <img
-                  src="/logo_reckme.png"
-                  alt="reckme"
+                  src="/logo.png"
+                  alt="ReckMe"
                   className="h-11 md:h-14 w-auto object-contain brightness-0 invert"
                 />
               </div>
+
+              {/* Brand Name */}
+              <span className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
+                ReckMe
+              </span>
             </Link>
 
             {/* Desktop Menu */}

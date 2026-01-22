@@ -50,7 +50,7 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="flex items-center gap-2 text-gray-700">
             <Users className="text-blue-600" size={20} />
-            <span className="font-semibold">reckme</span>
+            <span className="font-semibold">ReckMe</span>
             <span className="text-sm">© 2026 All rights reserved</span>
           </div>
 

@@ -38,7 +38,7 @@ const AboutPreview = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
-              reckme
+              ReckMe
             </span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">

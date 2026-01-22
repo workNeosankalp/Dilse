@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
   Users,
@@ -18,24 +17,28 @@ const About = () => {
       title: "Cuddle Companion Rental",
       description:
         "Book professional companions for emotional comfort and relaxation. Available for hourly or overnight sessions with verified providers trained in professional boundaries and therapeutic presence.",
+      image: "/assets/img1.png", // Girl in saree
     },
     {
       icon: Coffee,
       title: "Date or Friend Rental",
       description:
         "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly rates with professional, discreet companions who understand social etiquette and genuine conversation.",
+      image: "/assets/img2.png", // Girl standing
     },
     {
       icon: Moon,
       title: "Sleep Partner Rental",
       description:
         "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking. All providers pass rigorous background checks and safety protocols.",
+      image: "/assets/img4.png", // Couple
     },
     {
       icon: Sparkles,
       title: "Wellness & Spa Rentals",
       description:
         "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day.",
+      image: "/assets/img3.png", // Use this instead, or upload new bg-removed version
     },
   ];
 
@@ -69,38 +72,55 @@ const About = () => {
 
   return (
     <div className="bg-linear-to-b from-white via-blue-50 to-cyan-50">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Users
-              className="text-blue-600 mx-auto mb-6 md:mt-8"
-              size={60}
-              strokeWidth={1.5}
-            />
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">reckme</span>
-            </h1>
-            <p className="text-xl text-gray-700 leading-relaxed mb-4">
-              A professional companion rental platform offering verified
-              providers for cuddle sessions, date or friend rentals, overnight
-              sleep, spa & wellness experiences.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Designed with professionalism at its core, reckme offers a curated
-              marketplace for booking quality companionship experiences. Every
-              interaction is built on trust, consent, and mutual understanding —
-              ensuring safe, reliable service delivery from verified providers.
-            </p>
-          </motion.div>
+      {/* Hero Section with Couple Image */}
+      <section className="pt-24 pb-16 px-6 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Users
+                className="text-blue-600 mb-6"
+                size={60}
+                strokeWidth={1.5}
+              />
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                About <span className="text-blue-600">reckme</span>
+              </h1>
+              <p className="text-xl text-gray-700 leading-relaxed mb-4">
+                A professional companion rental platform offering verified
+                providers for cuddle sessions, date or friend rentals, overnight
+                sleep, spa & wellness experiences.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Designed with professionalism at its core, reckme offers a
+                curated marketplace for booking quality companionship
+                experiences. Every interaction is built on trust, consent, and
+                mutual understanding.
+              </p>
+            </motion.div>
+
+            {/* Right: Couple Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <img
+                src="/assets/img1.png"
+                alt="Companions"
+                className="w-full max-w-md h-auto drop-shadow-2xl"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Curated Experiences */}
+      {/* Curated Experiences with Character Images */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -127,19 +147,39 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-linear-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100"
+                className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 overflow-hidden group"
               >
-                <service.icon
-                  className="text-blue-600 mb-4"
-                  size={40}
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {service.description}
-                </p>
+                <div className="flex items-center gap-3 p-6">
+                  {/* Left: Content */}
+                  <div className="flex-1 relative z-10">
+                    <service.icon
+                      className="text-blue-600 mb-3"
+                      size={36}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Right: Character Image - Tighter Spacing */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                    className="shrink-0"
+                  >
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-24 h-32 md:w-28 md:h-36 object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>

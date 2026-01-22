@@ -7,14 +7,14 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-slate-50 to-cyan-50 overflow-hidden px-6 pt-28 pb-16 md:pt-10 md:pb-0"
       style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
     >
-      {/* Background Gradient Blobs */}
+      {/* Background gradient Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300 rounded-full blur-3xl opacity-20"></div>
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left: Phone Mockup */}
+        {/* Left: Phone Mockup with Ghibli Character */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -24,34 +24,46 @@ const Hero = () => {
           <div className="relative">
             {/* Phone Frame */}
             <div className="w-80 h-150 bg-linear-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
-              <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="bg-linear-to-br from-blue-500 to-cyan-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Users className="text-white" size={40} />
-                  </div>
+              <div className="w-full h-full bg-linear-to-b from-blue-50 to-white rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center p-6">
+                {/* Ghibli Character Image */}
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="mb-6 ml-9"
+                >
+                  <img
+                    src="/assets/img1.png"
+                    alt="Companion"
+                    className="w-48 h-48 object-contain drop-shadow-2xl"
+                  />
+                </motion.div>
+
+                <div className="text-center">
+                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    reckme
+                    ReckMe
                   </h3>
-                  <p className="text-gray-600 mb-1">
+                  <p className="text-gray-600 text-sm mb-1">
                     Professional Companion Rentals
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-xs text-gray-500">
                     Book by the hour or day
                   </p>
 
-                  <div className="mt-8 space-y-3">
-                    <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
-                      <p className="text-sm font-medium text-gray-800">
+                  <div className="mt-6 space-y-2">
+                    <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
+                      <p className="text-xs font-medium text-gray-800">
                         ⏰ Flexible Booking
                       </p>
                     </div>
-                    <div className="bg-cyan-50 p-4 rounded-2xl border border-cyan-200">
-                      <p className="text-sm font-medium text-gray-800">
+                    <div className="bg-cyan-50 p-3 rounded-xl border border-cyan-200">
+                      <p className="text-xs font-medium text-gray-800">
                         ✓ Verified Providers
                       </p>
                     </div>
-                    <div className="bg-blue-50 p-4 rounded-2xl border border-blue-200">
-                      <p className="text-sm font-medium text-gray-800">
+                    <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
+                      <p className="text-xs font-medium text-gray-800">
                         🛡️ Safe & Secure
                       </p>
                     </div>
@@ -124,7 +136,7 @@ const Hero = () => {
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100">
               <Users className="text-blue-600" size={20} />
               <span className="text-sm font-medium text-gray-800">
-                500+ Companions
+                Launching soon
               </span>
             </div>
           </motion.div>

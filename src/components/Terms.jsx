@@ -14,7 +14,7 @@ const Terms = () => {
       icon: CheckCircle,
       title: "1. Eligibility",
       content: [
-        "You must be 18 years or older to use reckme.",
+        "You must be 18 years or older to use ReckMe.",
         "By using the Platform, you confirm that all information provided is accurate, complete, and truthful.",
         "Users are responsible for complying with all local laws applicable to their location.",
       ],
@@ -23,16 +23,16 @@ const Terms = () => {
       icon: FileText,
       title: "2. Nature of the Platform",
       content: [
-        "reckme is a professional companion rental platform that facilitates bookings between users and verified service providers for companionship experiences.",
-        "reckme does not guarantee any specific outcome or experience quality.",
+        "ReckMe is a professional companion rental platform that facilitates bookings between users and verified service providers for companionship experiences.",
+        "ReckMe does not guarantee any specific outcome or experience quality.",
         "All interactions are strictly mutual, consensual, and user-driven.",
-        "reckme does not supervise or control in-person meetings.",
+        "ReckMe does not supervise or control in-person meetings.",
       ],
     },
     {
       icon: Shield,
       title: "3. User Responsibilities",
-      intro: "By using reckme, you agree to:",
+      intro: "By using ReckMe, you agree to:",
       content: [
         "Treat all users and providers with respect and dignity",
         "Maintain clear communication and consent at all times",
@@ -50,7 +50,7 @@ const Terms = () => {
           subtitle: "4.1 Payment Authorization",
           points: [
             "At the time of booking a service, the applicable amount will be debited from your account.",
-            "The amount will be securely held by reckme and will not be credited to the provider immediately.",
+            "The amount will be securely held by ReckMe and will not be credited to the provider immediately.",
           ],
         },
         {
@@ -71,7 +71,7 @@ const Terms = () => {
           points: [
             "If the OTP is not entered on the scheduled date of booking, the transaction will be treated as incomplete.",
             "In such cases, the full amount will be automatically refunded to the original payment method, subject to payment gateway timelines.",
-            "reckme acts only as a facilitator for secure transactions and does not hold funds beyond processing requirements.",
+            "ReckMe acts only as a facilitator for secure transactions and does not hold funds beyond processing requirements.",
           ],
         },
       ],
@@ -82,13 +82,13 @@ const Terms = () => {
       content: [
         "Cancellation policies may vary based on service type and timing.",
         "Repeated no-shows, misuse of bookings, or false claims may lead to account restrictions.",
-        "reckme reserves the right to investigate disputes and take appropriate action.",
+        "ReckMe reserves the right to investigate disputes and take appropriate action.",
       ],
     },
     {
       icon: Shield,
       title: "6. Safety & Conduct",
-      intro: "reckme maintains a zero-tolerance policy for:",
+      intro: "ReckMe maintains a zero-tolerance policy for:",
       content: [
         "Harassment, abuse, or threatening behavior",
         "Non-consensual actions of any kind",
@@ -103,7 +103,7 @@ const Terms = () => {
       title: "7. Profile Content & Verification",
       content: [
         "Users are solely responsible for the content shared on their profiles.",
-        "reckme reserves the right to verify, review, modify, or remove content that violates these Terms.",
+        "ReckMe reserves the right to verify, review, modify, or remove content that violates these Terms.",
         "Impersonation or false identity representation is strictly prohibited.",
       ],
     },
@@ -111,23 +111,23 @@ const Terms = () => {
       icon: Lock,
       title: "8. Privacy & Data Protection",
       content: [
-        "Your use of reckme is governed by our Privacy Policy, which outlines how we collect, use, and protect your data.",
-        "reckme does not share personal data with third parties without lawful justification or user consent.",
+        "Your use of ReckMe is governed by our Privacy Policy, which outlines how we collect, use, and protect your data.",
+        "ReckMe does not share personal data with third parties without lawful justification or user consent.",
       ],
     },
     {
       icon: AlertCircle,
       title: "9. Limitation of Liability",
       content: [
-        "reckme is not responsible for the conduct, actions, or outcomes of user-provider interactions.",
+        "ReckMe is not responsible for the conduct, actions, or outcomes of user-provider interactions.",
         "Any meetings or experiences occur at the users' own discretion and risk.",
-        "reckme shall not be liable for emotional distress, personal injury, financial loss, or disputes arising from user interactions.",
+        "ReckMe shall not be liable for emotional distress, personal injury, financial loss, or disputes arising from user interactions.",
       ],
     },
     {
       icon: Shield,
       title: "10. Account Suspension & Termination",
-      intro: "reckme reserves the right to:",
+      intro: "ReckMe reserves the right to:",
       content: [
         "Suspend or terminate accounts without prior notice",
         "Restrict access in case of violations or suspicious activity",
@@ -138,7 +138,7 @@ const Terms = () => {
       icon: FileText,
       title: "11. Modifications to Terms",
       content: [
-        "reckme may update these Terms from time to time. Continued use of the Platform after changes constitutes acceptance of the revised Terms.",
+        "ReckMe may update these Terms from time to time. Continued use of the Platform after changes constitutes acceptance of the revised Terms.",
       ],
     },
     {
@@ -168,7 +168,7 @@ const Terms = () => {
             Effective Date: January 20, 2026
           </p>
           <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Welcome to reckme. By accessing or using the reckme mobile
+            Welcome to ReckMe. By accessing or using the ReckMe mobile
             application, website, or services ("Platform"), you agree to comply
             with and be bound by the following Terms & Conditions ("Terms").
             Please read them carefully before using the Platform.
@@ -176,7 +176,7 @@ const Terms = () => {
           <div className="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
             <p className="text-gray-800 font-medium">
               ⚠️ If you do not agree with these Terms, you must discontinue use
-              of reckme immediately.
+              of ReckMe immediately.
             </p>
           </div>
         </motion.div>
@@ -266,9 +266,9 @@ const Terms = () => {
             contact:
           </p>
           <p className="text-lg font-semibold text-gray-900">
-            Support Team – reckme
+            Support Team – ReckMe
           </p>
-          <p className="text-blue-600 font-medium">📧 support@reckme.app</p>
+          <p className="text-blue-600 font-medium">📧 support@ReckMe.app</p>
         </motion.div>
 
         {/* Final Note */}
@@ -282,11 +282,11 @@ const Terms = () => {
           <Shield className="text-blue-600 mx-auto mb-4" size={48} />
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Final Note</h3>
           <p className="text-lg text-gray-700 italic">
-            By using reckme, you acknowledge that you have read, understood, and
+            By using ReckMe, you acknowledge that you have read, understood, and
             agreed to these Terms & Conditions —
           </p>
           <p className="text-xl font-bold text-blue-600 mt-2">
-            reckme, from the heart, with responsibility. 💙
+            ReckMe, from the heart, with responsibility. 💙
           </p>
         </motion.div>
       </div>

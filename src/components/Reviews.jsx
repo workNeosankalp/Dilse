@@ -117,18 +117,17 @@ const Reviews = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-blue-600 text-white px-8 py-4 rounded-xl shadow-2xl flex items-center gap-3 max-w-md"
+            className="fixed top-20 md:top-24 left-4 right-4 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2 z-50 bg-blue-600 text-white px-4 md:px-8 py-3 md:py-4 rounded-xl shadow-2xl flex items-center gap-2 md:gap-3 w-auto md:max-w-md"
           >
-            <div className="bg-white/20 p-2 rounded-full">
-              <Star size={24} />
+            <div className="bg-white/20 p-1.5 md:p-2 rounded-full flex-shrink-0">
+              <Star size={20} className="md:w-6 md:h-6" />
             </div>
-            <div>
-              <p className="font-semibold text-lg">
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-sm md:text-lg truncate">
                 Review Feature Coming Soon!
               </p>
-              <p className="text-sm text-blue-100">
-                You'll be able to add your own review
-                shortly.
+              <p className="text-xs md:text-sm text-blue-100 line-clamp-2">
+                You'll be able to add your own review shortly.
               </p>
             </div>
           </motion.div>

@@ -21,9 +21,9 @@ const Loading = () => {
         >
           <div className="bg-linear-to-br from-blue-500 to-cyan-500 p-4 rounded-3xl shadow-2xl">
             <img
-              src="/assets/img4.png"
+              src="/assets/img5.png"
               alt="ReckMe Companions"
-              className="w-36 h-36 md:w-44 md:h-44 object-contain drop-shadow-xl"
+              className="w-36 h-40 md:w-44 md:h-44 object-contain drop-shadow-xl"
             />
           </div>
         </motion.div>

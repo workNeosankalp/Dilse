@@ -51,9 +51,9 @@ const Reviews = () => {
               Clients Say
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          {/* <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Trusted by hundreds of satisfied clients across India
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Reviews Grid */}
@@ -127,7 +127,7 @@ const Reviews = () => {
                 Review Feature Coming Soon!
               </p>
               <p className="text-sm text-blue-100">
-                These are sample reviews. You'll be able to add your own review
+                You'll be able to add your own review
                 shortly.
               </p>
             </div>

@@ -30,10 +30,10 @@ const Hero = () => {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="mb-6 ml-9"
+                  className="mb-6 "
                 >
                   <img
-                    src="/assets/img1.png"
+                    src="/assets/img4.png"
                     alt="Companion"
                     className="w-48 h-48 object-contain drop-shadow-2xl"
                   />

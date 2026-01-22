@@ -6,20 +6,25 @@ const Loading = () => {
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-slate-50 to-cyan-50">
       <div className="text-center">
         {/* Animated Icon */}
+
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 360],
+            scale: [1, 1.05, 1],
+            rotate: [0, 5, -5, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
           }}
           className="flex justify-center mb-8"
         >
-          <div className="bg-linear-to-br from-blue-500 to-cyan-500 p-6 rounded-3xl">
-            <Users className="text-white" size={64} />
+          <div className="bg-linear-to-br from-blue-500 to-cyan-500 p-4 rounded-3xl shadow-2xl">
+            <img
+              src="/assets/img4.png"
+              alt="ReckMe Companions"
+              className="w-36 h-36 md:w-44 md:h-44 object-contain drop-shadow-xl"
+            />
           </div>
         </motion.div>
 
@@ -30,7 +35,9 @@ const Loading = () => {
           transition={{ duration: 0.6 }}
           className="text-5xl font-bold text-blue-600 mb-4"
         >
-          ReckMe
+          <span className="font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-600">
+            ReckMe
+          </span>
         </motion.h1>
 
         {/* Loading Text */}

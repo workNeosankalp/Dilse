@@ -10,37 +10,68 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 const Services = () => {
+  // const services = [
+  //   {
+  //     name: "Cuddle Companion Rental",
+  //     icon: Users,
+  //     img: "/assets/service1.jpg",
+  //     description:
+  //       "Book a professional companion for emotional comfort and relaxation. Available for hourly or overnight sessions with transparent pricing. All providers are background-verified and trained in professional boundaries. Perfect for stress relief, therapeutic touch, or companionship during difficult times.",
+  //     background: "linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB, #1E40AF)",
+  //   },
+  //   {
+  //     name: "Date or Friend Rental",
+  //     icon: Coffee,
+  //     img: "/assets/service2.jpg",
+  //     description:
+  //       "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly and daily rates with instant booking confirmation. Professional, discreet companions who understand social etiquette and the value of genuine conversation. Perfect for corporate events, family gatherings, or when you need a plus-one.",
+  //     background: "linear-gradient(135deg, #F472B6, #EC4899, #DB2777, #BE185D)",
+  //   },
+  //   {
+  //     name: "Sleep Partner Rental",
+  //     icon: Moon,
+  //     img: "/assets/service3.jpg",
+  //     description:
+  //       "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking required. All providers pass rigorous background checks and safety protocols. Designed for those experiencing loneliness, anxiety, or seeking peaceful rest with a trusted, professional presence.",
+  //     background: "linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9, #5B21B6)",
+  //   },
+  //   {
+  //     name: "Spa & Wellness Rentals",
+  //     icon: Sparkles,
+  //     img: "/assets/service4.jpg",
+  //     description:
+  //       "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day. Flexible scheduling with in-home service options available. Experience professional self-care and rejuvenation tailored to your schedule and preferences.",
+  //     background: "linear-gradient(135deg, #2DD4BF, #14B8A6, #0D9488, #0F766E)",
+  //   },
+  // ];
+
   const services = [
     {
-      name: "Cuddle Companion Rental",
+      name: "Companion",
       icon: Users,
       img: "/assets/service1.jpg",
-      description:
-        "Book a professional companion for emotional comfort and relaxation. Available for hourly or overnight sessions with transparent pricing. All providers are background-verified and trained in professional boundaries. Perfect for stress relief, therapeutic touch, or companionship during difficult times.",
+      description: "Platonic companionship services.",
       background: "linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB, #1E40AF)",
     },
     {
-      name: "Date or Friend Rental",
+      name: "Social Meet",
       icon: Coffee,
       img: "/assets/service2.jpg",
-      description:
-        "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly and daily rates with instant booking confirmation. Professional, discreet companions who understand social etiquette and the value of genuine conversation. Perfect for corporate events, family gatherings, or when you need a plus-one.",
+      description: "Professional social companion.",
       background: "linear-gradient(135deg, #F472B6, #EC4899, #DB2777, #BE185D)",
     },
     {
-      name: "Sleep Partner Rental",
+      name: "Accommodation",
       icon: Moon,
       img: "/assets/service3.jpg",
-      description:
-        "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking required. All providers pass rigorous background checks and safety protocols. Designed for those experiencing loneliness, anxiety, or seeking peaceful rest with a trusted, professional presence.",
+      description: "Shared accommodation services.",
       background: "linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9, #5B21B6)",
     },
     {
-      name: "Spa & Wellness Rentals",
+      name: "Wellness & Relaxation",
       icon: Sparkles,
       img: "/assets/service4.jpg",
-      description:
-        "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day. Flexible scheduling with in-home service options available. Experience professional self-care and rejuvenation tailored to your schedule and preferences.",
+      description: "Professional massage & relaxation services.",
       background: "linear-gradient(135deg, #2DD4BF, #14B8A6, #0D9488, #0F766E)",
     },
   ];

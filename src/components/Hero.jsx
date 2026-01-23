@@ -67,7 +67,7 @@ const Hero = () => {
                 >
                   <img
                     src="/assets/img4.png"
-                    alt="Companion"
+                    alt="Professional support illustration"
                     className="w-48 h-48 object-contain drop-shadow-2xl"
                   />
                 </motion.div>
@@ -77,18 +77,18 @@ const Hero = () => {
                     ReckMe
                   </h3>
                   <p className="text-gray-600 text-sm mb-1">
-                    Professional Companion Rentals
+                    Professional Human Support Platform
                   </p>
                   <p className="text-xs text-gray-500">
-                    Book by the hour or day
+                    Flexible hourly or daily access
                   </p>
 
                   <div className="mt-6 space-y-2">
-                    <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
+                    {/* <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
                       <p className="text-xs font-medium text-gray-800">
                         ⏰ Flexible Booking
                       </p>
-                    </div>
+                    </div> */}
                     <div className="bg-cyan-50 p-3 rounded-xl border border-cyan-200">
                       <p className="text-xs font-medium text-gray-800">
                         ✓ Verified Providers
@@ -128,9 +128,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Rent Premium
+              Access Premium
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                Companionship
+                Human Support
               </span>
             </h1>
           </motion.div>
@@ -141,9 +141,10 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-xl text-gray-700 mb-8 leading-relaxed"
           >
-            Book professional companions for cuddle sessions, date rentals,
-            overnight sleep, and wellness experiences. Flexible hourly and daily
-            rentals available with verified, background-checked providers.
+            Access verified professionals for emotional well-being, social
+            interaction and wellness-focused experiences. Services are available
+            on an hourly or daily basis with secure payments and consistent
+            quality.
           </motion.p>
 
           {/* Feature Pills */}
@@ -162,14 +163,12 @@ const Hero = () => {
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-cyan-100">
               <Clock className="text-cyan-600" size={20} />
               <span className="text-sm font-medium text-gray-800">
-                Hourly/Daily Rates
+                Flexible Scheduling
               </span>
             </div>
             <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full shadow-md">
               <Users size={20} />
-              <span className="text-sm font-medium">
-                Launching 1st Feb
-              </span>
+              <span className="text-sm font-medium">Launching 1st Feb</span>
             </div>
           </motion.div>
 

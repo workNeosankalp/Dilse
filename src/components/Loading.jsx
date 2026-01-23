@@ -47,7 +47,7 @@ const Loading = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-xl text-gray-600"
         >
-          Loading your companion services...
+          Preparing your experience…
         </motion.p>
 
         {/* Loading Dots */}

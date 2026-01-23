@@ -6,15 +6,15 @@ const AboutPreview = () => {
   const features = [
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Flexible Booking",
+      title: "Flexible Access",
       description:
-        "Rent companions by the hour or day. Instant confirmation with transparent pricing and no hidden fees.",
+        "Choose services by the hour or day with instant confirmation, transparent pricing, and no hidden fees.",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Professional Providers",
       description:
-        "All companions are background-verified individuals committed to providing respectful and quality experiences.",
+        "All providers are background-verified individuals committed to delivering respectful and high-quality experiences.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -42,10 +42,7 @@ const AboutPreview = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            A professional companion rental platform offering verified providers
-            for cuddle sessions, date or friend rentals, overnight sleep, spa &
-            wellness experiences. Book by the hour or day with secure payments
-            and guaranteed quality.
+            A professional human-support platform connecting verified individuals for emotional comfort, social interaction and wellness experiences. Services are available on an hourly or daily basis with secure payments and consistent quality.
           </p>
         </motion.div>
 

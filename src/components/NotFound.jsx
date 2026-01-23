@@ -81,7 +81,7 @@ const NotFound = () => {
           transition={{ delay: 1.1 }}
           className="text-sm text-gray-500 mt-12"
         >
-          Error code: "Service booking not found at this URL" 🔍
+          Error code: "Service not found at this URL" 🔍
         </motion.p>
       </div>
     </div>

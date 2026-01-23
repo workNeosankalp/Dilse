@@ -14,41 +14,38 @@ const About = () => {
   const services = [
     {
       icon: Users,
-      title: "Cuddle Companion Rental",
-      description:
-        "Book professional companions for emotional comfort and relaxation. Available for hourly or overnight sessions with verified providers trained in professional boundaries and therapeutic presence.",
-      image: "/assets/img1.png", // Girl in saree
+      title: "Companion",
+      description: "Platonic companionship services.",
+      image: "/assets/img1.png",
     },
     {
       icon: Coffee,
-      title: "Date or Friend Rental",
-      description:
-        "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly rates with professional, discreet companions who understand social etiquette and genuine conversation.",
-      image: "/assets/img2.png", // Girl standing
+      title: "Social Meet",
+      description: "Professional social companion.",
+      image: "/assets/img2.png",
     },
     {
       icon: Moon,
-      title: "Sleep Partner Rental",
-      description:
-        "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking. All providers pass rigorous background checks and safety protocols.",
-      image: "/assets/img4.png", // Couple
+      title: "Accommodation",
+      description: "Shared accommodation services.",
+      image: "/assets/img4.png",
     },
     {
       icon: Sparkles,
-      title: "Wellness & Spa Rentals",
-      description:
-        "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day.",
-      image: "/assets/img3.png", // Use this instead, or upload new bg-removed version
+      title: "Wellness & Relaxation",
+      description: "Professional massage & relaxation services.",
+      image: "/assets/img3.png",
     },
   ];
 
   const features = [
     {
       icon: Clock,
-      title: "Flexible Booking",
+      title: "Flexible Access",
       description:
-        "Rent companions by the hour or day. Instant confirmation with transparent pricing and no hidden fees.",
+        "Choose services by the hour or day with instant confirmation, transparent pricing, and no hidden fees.",
     },
+
     {
       icon: Lock,
       title: "Secure Payments",
@@ -91,15 +88,15 @@ const About = () => {
                 About <span className="text-blue-600">reckme</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                A professional companion rental platform offering verified
-                providers for cuddle sessions, date or friend rentals, overnight
-                sleep, spa & wellness experiences.
+                A professional human-support platform connecting verified
+                individuals for emotional comfort, social interaction, and
+                wellness experiences.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Designed with professionalism at its core, reckme offers a
-                curated marketplace for booking quality companionship
-                experiences. Every interaction is built on trust, consent, and
-                mutual understanding.
+                Built with professionalism at its core, ReckMe offers a
+                carefully curated marketplace for accessing high-quality
+                personal support services. Every interaction is guided by trust,
+                clear boundaries, consent, and mutual understanding.
               </p>
             </motion.div>
 
@@ -134,8 +131,9 @@ const About = () => {
               Curated Experiences
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Thoughtfully designed services that match different companionship
-              needs while maintaining a refined and respectful environment.
+              Thoughtfully designed services that support different personal and
+              social needs while maintaining a refined and respectful
+              environment.
             </p>
           </motion.div>
 
@@ -197,11 +195,11 @@ const About = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Professional Service Rental Platform
+              Professional Service Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A streamlined booking system to discover verified providers
-              aligned with your needs — simple, secure, and professional.
+              A streamlined system to discover verified individuals aligned with
+              your needs — simple, secure, and professional.
             </p>
           </motion.div>
 
@@ -242,10 +240,10 @@ const About = () => {
               Accessible Quality Service
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              reckme is built on the idea that premium companionship experiences
-              should remain accessible. Our transparent pricing and verified
-              providers ensure quality service without compromising safety or
-              professionalism.
+              ReckMe is built on the belief that high-quality personal support
+              experiences should be both accessible and trustworthy. Transparent
+              pricing and verified providers help maintain consistent quality
+              while upholding safety, privacy, and professionalism.
             </p>
           </motion.div>
         </div>
@@ -292,7 +290,7 @@ const About = () => {
             className="text-center mt-12"
           >
             <p className="text-2xl font-bold text-gray-900">
-              reckme is where professional companionship meets quality service —
+              reckme is where professional human support meets quality service —
             </p>
             <p className="text-xl text-blue-600 font-semibold mt-2">
               and every connection begins reckme. 💙

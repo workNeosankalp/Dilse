@@ -159,14 +159,6 @@ const Privacy = () => {
               By accessing the Platform or using our services, you agree to the terms of this Privacy Policy.
             </p>
           </div>
-          <div className="mt-4">
-            <a 
-              href="https://www.reckme.com/privacy" 
-              className="text-blue-600 hover:text-blue-800 font-medium underline"
-            >
-              You can review the full Privacy Policy online here
-            </a>
-          </div>
         </motion.div>
 
         {/* Sections */}

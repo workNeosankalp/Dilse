@@ -166,10 +166,10 @@ const Hero = () => {
                 Flexible Scheduling
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full shadow-md">
+            {/* <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full shadow-md">
               <Users size={20} />
               <span className="text-sm font-medium">Launching 1st Feb</span>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* App Store Buttons */}

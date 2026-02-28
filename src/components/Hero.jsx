@@ -1,16 +1,27 @@
-import { motion } from "framer-motion";
-import { Clock, Shield, Users, Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Clock, Shield, Star } from "lucide-react";
 import { useState } from "react";
 
 const Hero = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState({ title: "", subtitle: "" });
 
-  const handleStoreClick = (e) => {
+  const handlePlayStoreClick = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.reeviy.reckme",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const handleAppStoreClick = (e) => {
     e.preventDefault();
+    setAlertMessage({
+      title: "Coming Soon! 🚀",
+      subtitle: "ReckMe will be available on the App Store very soon. Stay tuned!",
+    });
     setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 4000); // Hide after 4 seconds
+    setTimeout(() => setShowAlert(false), 4000);
   };
 
   return (
@@ -19,26 +30,28 @@ const Hero = () => {
       style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
     >
       {/* Alert Notification */}
-      {showAlert && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="fixed top-20 md:top-24 left-4 right-4 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2 z-50 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 md:px-8 py-3 md:py-4 rounded-xl shadow-2xl flex items-center gap-2 md:gap-3 w-auto md:max-w-md"
-        >
-          <div className="bg-white/20 p-1.5 md:p-2 rounded-full flex-shrink-0">
-            <Star size={20} className="md:w-6 md:h-6" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="font-semibold text-sm md:text-lg">
-              Launching Soon! 🚀
-            </p>
-            <p className="text-xs md:text-sm text-blue-100">
-              ReckMe app launches on 1st February 2026. Stay tuned!
-            </p>
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {showAlert && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-20 md:top-24 left-4 right-4 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2 z-50 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 md:px-8 py-3 md:py-4 rounded-xl shadow-2xl flex items-center gap-2 md:gap-3 w-auto md:max-w-md"
+          >
+            <div className="bg-white/20 p-1.5 md:p-2 rounded-full flex-shrink-0">
+              <Star size={20} className="md:w-6 md:h-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-sm md:text-lg">
+                {alertMessage.title}
+              </p>
+              <p className="text-xs md:text-sm text-blue-100">
+                {alertMessage.subtitle}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Background gradient Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -47,7 +60,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left: Phone Mockup with Ghibli Character */}
+        {/* Left: Phone Mockup */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -58,7 +71,6 @@ const Hero = () => {
             {/* Phone Frame */}
             <div className="w-80 h-150 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
               <div className="w-full h-full bg-gradient-to-b from-blue-50 to-white rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center p-6">
-                {/* Ghibli Character Image */}
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -84,11 +96,6 @@ const Hero = () => {
                   </p>
 
                   <div className="mt-6 space-y-2">
-                    {/* <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
-                      <p className="text-xs font-medium text-gray-800">
-                        ⏰ Flexible Booking
-                      </p>
-                    </div> */}
                     <div className="bg-cyan-50 p-3 rounded-xl border border-cyan-200">
                       <p className="text-xs font-medium text-gray-800">
                         ✓ Verified Providers
@@ -166,10 +173,6 @@ const Hero = () => {
                 Flexible Scheduling
               </span>
             </div>
-            {/* <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full shadow-md">
-              <Users size={20} />
-              <span className="text-sm font-medium">Launching 1st Feb</span>
-            </div> */}
           </motion.div>
 
           {/* App Store Buttons */}
@@ -179,9 +182,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
-            {/* Google Play */}
+            {/* ✅ Google Play — opens real link */}
             <button
-              onClick={handleStoreClick}
+              onClick={handlePlayStoreClick}
               className="flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer"
             >
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
@@ -193,9 +196,9 @@ const Hero = () => {
               </div>
             </button>
 
-            {/* App Store */}
+            {/* ✅ App Store — shows Coming Soon alert */}
             <button
-              onClick={handleStoreClick}
+              onClick={handleAppStoreClick}
               className="flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer"
             >
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">

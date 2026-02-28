@@ -33,7 +33,7 @@ const Footer = () => {
     },
     {
       name: "Twitter",
-      href: "#",
+      href: "https://x.com/reck_me_?s=11",
       icon: <Twitter size={18} />,
     },
     {

@@ -33,12 +33,12 @@ const Footer = () => {
     },
     {
       name: "Twitter",
-      href: "#", // Add your Twitter link here
+      href: "#",
       icon: <Twitter size={18} />,
     },
     {
       name: "LinkedIn",
-      href: "#", // Add your LinkedIn link here
+      href: "https://www.linkedin.com/company/reckme/",
       icon: <Linkedin size={18} />,
     },
   ];

@@ -10,7 +10,7 @@ const Hero = () => {
     window.open(
       "https://play.google.com/store/apps/details?id=com.reeviy.reckme",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -18,7 +18,8 @@ const Hero = () => {
     e.preventDefault();
     setAlertMessage({
       title: "Coming Soon! 🚀",
-      subtitle: "ReckMe will be available on the App Store very soon. Stay tuned!",
+      subtitle:
+        "ReckMe will be available on the App Store very soon. Stay tuned!",
     });
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 4000);
@@ -69,45 +70,13 @@ const Hero = () => {
         >
           <div className="relative">
             {/* Phone Frame */}
-            <div className="w-80 h-150 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-b from-blue-50 to-white rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center p-6">
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="mb-6"
-                >
-                  <img
-                    src="/assets/img4.png"
-                    alt="Professional support illustration"
-                    className="w-48 h-48 object-contain drop-shadow-2xl"
-                  />
-                </motion.div>
-
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    ReckMe
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-1">
-                    Professional Human Support Platform
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Flexible hourly or daily access
-                  </p>
-
-                  <div className="mt-6 space-y-2">
-                    <div className="bg-cyan-50 p-3 rounded-xl border border-cyan-200">
-                      <p className="text-xs font-medium text-gray-800">
-                        ✓ Verified Providers
-                      </p>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-xl border border-blue-200">
-                      <p className="text-xs font-medium text-gray-800">
-                        🛡️ Safe & Secure
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="relative w-[280px] h-[560px] sm:w-[320px] sm:h-[640px] bg-gradient-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
+              <div className="w-full h-full overflow-hidden rounded-[2.5rem]">
+                <img
+                  src="/assets/phoneImg.jpeg"
+                  alt="Phone Screen"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

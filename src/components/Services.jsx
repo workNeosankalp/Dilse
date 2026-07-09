@@ -10,67 +10,28 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 const Services = () => {
-  // const services = [
-  //   {
-  //     name: "Cuddle Companion Rental",
-  //     icon: Users,
-  //     img: "/assets/service1.jpg",
-  //     description:
-  //       "Book a professional companion for emotional comfort and relaxation. Available for hourly or overnight sessions with transparent pricing. All providers are background-verified and trained in professional boundaries. Perfect for stress relief, therapeutic touch, or companionship during difficult times.",
-  //     background: "linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB, #1E40AF)",
-  //   },
-  //   {
-  //     name: "Date or Friend Rental",
-  //     icon: Coffee,
-  //     img: "/assets/service2.jpg",
-  //     description:
-  //       "Rent a companion for events, dinners, weddings, or casual outings. Flexible hourly and daily rates with instant booking confirmation. Professional, discreet companions who understand social etiquette and the value of genuine conversation. Perfect for corporate events, family gatherings, or when you need a plus-one.",
-  //     background: "linear-gradient(135deg, #F472B6, #EC4899, #DB2777, #BE185D)",
-  //   },
-  //   {
-  //     name: "Sleep Partner Rental",
-  //     icon: Moon,
-  //     img: "/assets/service3.jpg",
-  //     description:
-  //       "Overnight companionship service for comfort and safety during sleep. Nightly rates available with advance booking required. All providers pass rigorous background checks and safety protocols. Designed for those experiencing loneliness, anxiety, or seeking peaceful rest with a trusted, professional presence.",
-  //     background: "linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9, #5B21B6)",
-  //   },
-  //   {
-  //     name: "Spa & Wellness Rentals",
-  //     icon: Sparkles,
-  //     img: "/assets/service4.jpg",
-  //     description:
-  //       "Access premium spa and wellness providers through our curated network. Book massage therapists, meditation guides, and wellness coaches by the hour or day. Flexible scheduling with in-home service options available. Experience professional self-care and rejuvenation tailored to your schedule and preferences.",
-  //     background: "linear-gradient(135deg, #2DD4BF, #14B8A6, #0D9488, #0F766E)",
-  //   },
-  // ];
-
   const services = [
     {
       name: "Companion",
       icon: Users,
-      img: "/assets/service1.jpg",
       description: "Platonic companionship services.",
       background: "linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB, #1E40AF)",
     },
     {
       name: "Social Meet",
       icon: Coffee,
-      img: "/assets/service2.jpg",
       description: "Professional social companion.",
       background: "linear-gradient(135deg, #F472B6, #EC4899, #DB2777, #BE185D)",
     },
     {
       name: "Accommodation",
       icon: Moon,
-      img: "/assets/service3.jpg",
       description: "Shared accommodation services.",
       background: "linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9, #5B21B6)",
     },
     {
       name: "Wellness & Relaxation",
       icon: Sparkles,
-      img: "/assets/service4.jpg",
       description: "Professional massage & relaxation services.",
       background: "linear-gradient(135deg, #2DD4BF, #14B8A6, #0D9488, #0F766E)",
     },
@@ -159,33 +120,8 @@ const Services = () => {
             zIndex = 0;
           }
 
-          return service.img ? (
-            // Render Image if available (Circular with minimal padding)
-            <div
-              key={i}
-              className="absolute transition-all duration-600 ease-in-out"
-              style={{
-                transform: `translate(${x}px, ${y}px) scale(${scale})`,
-                opacity,
-                filter: blur,
-                zIndex,
-                willChange: "transform, opacity, filter",
-              }}
-            >
-              <div className="relative rounded-full border-4 border-white/30 shadow-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
-                <img
-                  src={service.img}
-                  alt={service.name}
-                  className="rounded-full object-cover"
-                  style={{
-                    width: isMobile ? "240px" : "360px",
-                    height: isMobile ? "240px" : "360px",
-                  }}
-                />
-              </div>
-            </div>
-          ) : (
-            // Render Icon if no image
+          return (
+            // Render Icon
             <div
               key={i}
               className="absolute transition-all duration-600 ease-in-out flex items-center justify-center"

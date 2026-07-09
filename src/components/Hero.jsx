@@ -71,13 +71,7 @@ const Hero = () => {
           <div className="relative">
             {/* Phone Frame */}
             <div className="relative w-[280px] h-[560px] sm:w-[320px] sm:h-[640px] bg-gradient-to-br from-blue-600 to-cyan-600 rounded-[3rem] p-3 shadow-2xl">
-              <div className="w-full h-full overflow-hidden rounded-[2.5rem]">
-                <img
-                  src="/assets/phoneImg.jpeg"
-                  alt="Phone Screen"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="w-full h-full overflow-hidden rounded-[2.5rem] bg-linear-to-br from-blue-500/30 to-cyan-500/30"></div>
             </div>
 
             {/* Floating Badge */}

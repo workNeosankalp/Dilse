@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Users } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +25,10 @@ const Navbar = () => {
               className="flex items-center gap-3"
             >
               {/* Logo */}
-              <div className="bg-linear-to-r from-blue-600 to-cyan-600 rounded-lg">
-                <img
-                  src="/logo.png"
-                  alt="ReckMe"
-                  className="h-11 md:h-14 w-auto object-contain brightness-0 invert"
+              <div className="bg-linear-to-r from-blue-600 to-cyan-600 rounded-lg p-2">
+                <Users
+                  className="text-white h-7 md:h-9 w-7 md:w-9"
+                  strokeWidth={2}
                 />
               </div>
 

@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Star, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+  Star,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Users,
+} from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -129,12 +136,8 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="flex items-center gap-2 text-gray-700">
             <div className="flex items-center gap-2">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg p-1">
-                <img
-                  src="/logo.png"
-                  alt="ReckMe"
-                  className="h-6 w-auto object-contain brightness-0 invert"
-                />
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg p-1.5">
+                <Users className="text-white h-4 w-4" strokeWidth={2} />
               </div>
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
                 ReckMe

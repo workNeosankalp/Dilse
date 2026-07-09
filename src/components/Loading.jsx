@@ -19,11 +19,11 @@ const Loading = () => {
           }}
           className="flex justify-center mb-8"
         >
-          <div className="bg-linear-to-br from-blue-500 to-cyan-500 p-4 rounded-3xl shadow-2xl">
-            <img
-              src="/assets/img5.png"
-              alt="ReckMe Companions"
-              className="w-36 h-40 md:w-44 md:h-44 object-contain drop-shadow-xl"
+          <div className="bg-linear-to-br from-blue-500 to-cyan-500 p-6 rounded-3xl shadow-2xl">
+            <Users
+              className="text-white drop-shadow-xl"
+              size={96}
+              strokeWidth={1.5}
             />
           </div>
         </motion.div>

@@ -16,25 +16,21 @@ const About = () => {
       icon: Users,
       title: "Companion",
       description: "Platonic companionship services.",
-      image: "/assets/img1.png",
     },
     {
       icon: Coffee,
       title: "Social Meet",
       description: "Professional social companion.",
-      image: "/assets/img2.png",
     },
     {
       icon: Moon,
       title: "Accommodation",
       description: "Shared accommodation services.",
-      image: "/assets/img4.png",
     },
     {
       icon: Sparkles,
       title: "Wellness & Relaxation",
       description: "Professional massage & relaxation services.",
-      image: "/assets/img3.png",
     },
   ];
 
@@ -100,19 +96,6 @@ const About = () => {
               </p>
             </motion.div>
 
-            {/* Right: Couple Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
-            >
-              <img
-                src="/assets/img1.png"
-                alt="Companions"
-                className="w-full max-w-md h-auto drop-shadow-2xl"
-              />
-            </motion.div>
           </div>
         </div>
       </section>
@@ -163,20 +146,6 @@ const About = () => {
                     </p>
                   </div>
 
-                  {/* Right: Character Image - Tighter Spacing */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.15 }}
-                    className="shrink-0"
-                  >
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-24 h-32 md:w-28 md:h-36 object-contain group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </motion.div>
                 </div>
               </motion.div>
             ))}

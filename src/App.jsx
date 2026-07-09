@@ -21,24 +21,33 @@ function App() {
 
   useEffect(() => {
     const startTime = Date.now();
+    const minDisplayTime = 2500; // 2.5 seconds minimum
 
-    // Wait for page to load
-    window.addEventListener("load", () => {
+    const hideLoader = () => {
       const loadTime = Date.now() - startTime;
-      const minDisplayTime = 2500; // 2.5 seconds minimum
-
       // If loaded too fast, wait remaining time
       if (loadTime < minDisplayTime) {
         setTimeout(() => setLoading(false), minDisplayTime - loadTime);
       } else {
         setLoading(false);
       }
-    });
+    };
+
+    // If the page already finished loading before this effect ran,
+    // the "load" event will never fire, so handle it directly.
+    if (document.readyState === "complete") {
+      hideLoader();
+    } else {
+      window.addEventListener("load", hideLoader, { once: true });
+    }
 
     // Fallback: hide loader after 3 seconds max
     const timeout = setTimeout(() => setLoading(false), 3000);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("load", hideLoader);
+    };
   }, []);
 
   if (loading) return <Loading />;
